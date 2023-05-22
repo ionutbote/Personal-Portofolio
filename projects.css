@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #081b29;
+  color: antiquewhite;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 25px;
+  color: antiquewhite;
+  text-decoration: none;
+  font-weight: 600;
+}
+.navbar a {
+  font-size: 18px;
+  color: antiquewhite;
+  text-decoration: none;
+  font-weight: 400;
+  margin-left: 35px;
+  justify-content: baseline;
+}
+.projects h1 {
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  font-size: 40px;
+  text-decoration: underline;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-bottom: 15rem;
+  margin-top: 200px;
+}
+.item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.item .left {
+  flex: 1;
+}
+.item .right {
+  flex: 1;
+  margin-left: -100px;
+  background-color: rgb(245, 237, 228);
+  color: black;
+  padding: 3rem 2rem;
+  border-radius: 1%;
+  box-shadow: 0 0 10px rgb(163, 158, 158);
+  z-index: 2;
+}
+.item:nth-child(even) .right {
+  margin-left: 0;
+}
+.item:nth-child(even) .left {
+  margin-left: -100px;
+}
+.item .left .img {
+  overflow: hidden;
+}
+@media (max-width: 800px) {
+  .item {
+    flex-direction: column;
+  }
+  .item:nth-child(even) {
+    flex-direction: column;
+  }
+  .projects h1 {
+    font-size: 35px;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10%;
+  }
+  .logo {
+    display: none;
+  }
+}
